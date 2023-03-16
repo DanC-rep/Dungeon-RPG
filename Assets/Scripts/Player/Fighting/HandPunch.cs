@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class HandPunch : Fighting
+public class HandPunch : MonoBehaviour
 {
     private Animator anim;
 
@@ -17,8 +17,6 @@ public class HandPunch : Fighting
     private void Start()
     {
         anim = GetComponent<Animator>();
-
-        Damage = 5;
 
     }
 
@@ -59,7 +57,7 @@ public class HandPunch : Fighting
         {
             if (colliders[i].TryGetComponent(out SkeletonCombat skeleton))
             {
-                skeleton.TakeDamage(Damage);
+                skeleton.TakeDamage(gameObject.GetComponent<PlayerStats>().damage.GetValue());
             }
         }
 

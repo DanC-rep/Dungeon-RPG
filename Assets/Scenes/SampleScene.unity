@@ -4116,6 +4116,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1572993990}
   m_CullTransparentMesh: 1
+--- !u!114 &1584925389 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5195894374419392382, guid: 62aad273eff3e404a82c5fe1fbf5589e, type: 3}
+  m_PrefabInstance: {fileID: 1740911441}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03e61d27b5baa0e4893c0d80e5afe9fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1584971066
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4534,10 +4545,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1238364356, guid: 62aad273eff3e404a82c5fe1fbf5589e, type: 3}
-      propertyPath: coinUI
-      value: 
-      objectReference: {fileID: 978608783}
     - target: {fileID: 1859724621375028229, guid: 62aad273eff3e404a82c5fe1fbf5589e, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -4598,6 +4605,18 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5195894374419392382, guid: 62aad273eff3e404a82c5fe1fbf5589e, type: 3}
+      propertyPath: healthBar
+      value: 
+      objectReference: {fileID: 1323216133}
+    - target: {fileID: 5195894374419392382, guid: 62aad273eff3e404a82c5fe1fbf5589e, type: 3}
+      propertyPath: startHealth
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 5195894374419392382, guid: 62aad273eff3e404a82c5fe1fbf5589e, type: 3}
+      propertyPath: damage.baseValue
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 7778386273010874422, guid: 62aad273eff3e404a82c5fe1fbf5589e, type: 3}
       propertyPath: target
       value: 
@@ -4607,10 +4626,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 963194228}
     - target: {fileID: 7778386273070739985, guid: 62aad273eff3e404a82c5fe1fbf5589e, type: 3}
-      propertyPath: coin
-      value: 
-      objectReference: {fileID: 3916810972383283501, guid: 645068a5c0acdff4c871fc1a08d07608, type: 3}
-    - target: {fileID: 7778386273070739985, guid: 62aad273eff3e404a82c5fe1fbf5589e, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 4540228998887951902}
@@ -4618,6 +4633,10 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1782702500988321221}
+    - target: {fileID: 7778386273070739985, guid: 62aad273eff3e404a82c5fe1fbf5589e, type: 3}
+      propertyPath: skeletonStats
+      value: 
+      objectReference: {fileID: 1584925389}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 62aad273eff3e404a82c5fe1fbf5589e, type: 3}
 --- !u!4 &1749339558 stripped
@@ -9588,7 +9607,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerStats: {fileID: 4540228998887951903}
   healthBar: {fileID: 1323216133}
-  handPunch: {fileID: 4540228998887951901}
 --- !u!114 &4540228998887951903
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9602,11 +9620,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage:
-    baseValue: 0
+    baseValue: 20
   armor:
     baseValue: 0
   Health: 100
   startHealth: 100
+  healthBar: {fileID: 1323216133}
   startMoney: 100
 --- !u!4 &4548762041066942987
 Transform:

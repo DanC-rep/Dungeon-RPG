@@ -10,7 +10,7 @@ public class SkeletonCombat : MonoBehaviour
 
     public Player player;
     public HealthBar healthBar;
-    public EnemyManager enemyManager;
+    public SkeletonStats skeletonStats;
 
     private NavMeshAgent agent;
     private Animator anim;
@@ -28,7 +28,7 @@ public class SkeletonCombat : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         anim = GetComponent<Animator>();
 
-        healthBar.SetMaxHealth(enemyManager.health);
+        healthBar.SetMaxHealth(skeletonStats.Health);
     }
 
     private void Update()
@@ -36,7 +36,7 @@ public class SkeletonCombat : MonoBehaviour
         bool isDistance = Vector3.Distance(transform.position, target.transform.position) < agent.stoppingDistance;
         canHit = isDistance;
 
-        if (enemyManager.health <= 0)
+        if (skeletonStats.Health <= 0)
         {
             canHit = false;
         }
@@ -75,25 +75,25 @@ public class SkeletonCombat : MonoBehaviour
 
     private void DecreasePlayerHP()
     {
-        player.TakeDamage(enemyManager.damage);
+        player.GetComponent<PlayerStats>().TakeDamage(skeletonStats.damage.GetValue());
     }
 
     public void TakeDamage(int damage)
     {
-        if (enemyManager.health <= 0)
+        if (skeletonStats.Health <= 0)
         {
             anim.SetTrigger("Death");
         }
-        else if (enemyManager.health - damage <= 0)
+        else if (skeletonStats.Health - damage <= 0)
         {
-            enemyManager.health -= damage;
-            healthBar.SetHealth(enemyManager.health);
+            skeletonStats.Health -= damage;
+            healthBar.SetHealth(skeletonStats.Health);
             anim.SetTrigger("Death");
         }
-        else if (enemyManager.health > 0)
+        else if (skeletonStats.Health > 0)
         {
-            enemyManager.health -= damage;
-            healthBar.SetHealth(enemyManager.health);
+            skeletonStats.Health -= damage;
+            healthBar.SetHealth(skeletonStats.Health);
             anim.SetTrigger("Damage");
         }
     }
@@ -101,7 +101,7 @@ public class SkeletonCombat : MonoBehaviour
     private void DestroyEnemyEvent()
     {
         Destroy(gameObject);
-        PlayerStats.Money += enemyManager.moneyFrom;
+        PlayerStats.Money += skeletonStats.moneyFrom;
     }
 
 }
