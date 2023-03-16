@@ -55,7 +55,7 @@ public class HandPunch : MonoBehaviour
 
         for (int i = 0; i < colliders.Length; i++)
         {
-            if (colliders[i].TryGetComponent(out SkeletonCombat skeleton))
+            if (colliders[i].TryGetComponent(out SkeletonStats skeleton))
             {
                 skeleton.TakeDamage(gameObject.GetComponent<PlayerStats>().damage.GetValue());
             }

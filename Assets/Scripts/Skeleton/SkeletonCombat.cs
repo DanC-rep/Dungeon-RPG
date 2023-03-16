@@ -78,26 +78,6 @@ public class SkeletonCombat : MonoBehaviour
         player.GetComponent<PlayerStats>().TakeDamage(skeletonStats.damage.GetValue());
     }
 
-    public void TakeDamage(int damage)
-    {
-        if (skeletonStats.Health <= 0)
-        {
-            anim.SetTrigger("Death");
-        }
-        else if (skeletonStats.Health - damage <= 0)
-        {
-            skeletonStats.Health -= damage;
-            healthBar.SetHealth(skeletonStats.Health);
-            anim.SetTrigger("Death");
-        }
-        else if (skeletonStats.Health > 0)
-        {
-            skeletonStats.Health -= damage;
-            healthBar.SetHealth(skeletonStats.Health);
-            anim.SetTrigger("Damage");
-        }
-    }
-
     private void DestroyEnemyEvent()
     {
         Destroy(gameObject);
