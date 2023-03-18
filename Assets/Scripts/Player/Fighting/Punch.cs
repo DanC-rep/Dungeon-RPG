@@ -37,6 +37,12 @@ public class Punch : MonoBehaviour
 
     public void MakePunch()
     {
+        if (EquipmentManager.instance.currentEquipment[4] != null)
+        {
+            hitPoint = EquipmentManager.instance.currentMeshes[4].gameObject.transform.Find("HitPoint").transform;
+            radius = EquipmentManager.instance.currentEquipment[4].weaponRadius;
+        }
+
         Collider[] colliders = Physics.OverlapSphere(hitPoint.position, radius);
 
         for (int i = 0; i < colliders.Length; i++)

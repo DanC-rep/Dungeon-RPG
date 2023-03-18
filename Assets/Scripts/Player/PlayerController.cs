@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -14,6 +15,8 @@ public class PlayerController : MonoBehaviour
     public Interactible interact;
 
     [SerializeField] private float speed = 5;
+
+    bool isLoot = false;
 
 
     private void Start()
@@ -44,7 +47,7 @@ public class PlayerController : MonoBehaviour
     {
         bool isMove = Mathf.Abs(joystick.Direction.x) > 0.1 || Mathf.Abs(joystick.Direction.y) > 0.1;
 
-        if (isMove && Punch.makePunch)
+        if (isMove && (Punch.makePunch || isLoot))
         {
             rb.velocity = Vector3.zero;
         }
@@ -62,7 +65,15 @@ public class PlayerController : MonoBehaviour
 
     public void PickupAnim()
     {
+        StartCoroutine(PickupCoroutine());
+    }
+
+    IEnumerator PickupCoroutine()
+    {
+        isLoot = true;
         anim.SetTrigger("Loot");
+        yield return new WaitForSeconds(2.05f);
+        isLoot = false;
     }
 
     private void OnDrawGizmosSelected()

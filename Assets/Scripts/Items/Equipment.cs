@@ -9,6 +9,8 @@ public class Equipment : Item
     public int armorModifier;
     public int damageModifier;
 
+    public float weaponRadius;
+
     public override void Use()
     {
         base.Use();

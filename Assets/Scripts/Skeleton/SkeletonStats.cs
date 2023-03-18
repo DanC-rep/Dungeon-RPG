@@ -2,7 +2,6 @@ using UnityEngine;
 public class SkeletonStats : CharacterStats
 {
     public int moneyFrom;
-
     public override void TakeDamage(int damage)
     {
         if (Health <= 0)
