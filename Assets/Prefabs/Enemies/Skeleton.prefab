@@ -1102,11 +1102,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage:
-    baseValue: 0
+    baseValue: 5
   armor:
     baseValue: 0
   Health: 20
   startHealth: 40
+  healthBar: {fileID: 1859724622826826444}
   moneyFrom: 15
 --- !u!1 &3265966035974008334
 GameObject:

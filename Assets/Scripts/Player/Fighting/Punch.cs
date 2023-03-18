@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class HandPunch : MonoBehaviour
+public class Punch : MonoBehaviour
 {
     private Animator anim;
 
@@ -23,7 +23,10 @@ public class HandPunch : MonoBehaviour
     public IEnumerator MakePunchCoroutine()
     {
         makePunch = true;
-        anim.SetTrigger("Punch");
+        if (EquipmentManager.instance.currentEquipment[4] != null)
+            anim.SetTrigger("WeaponPunch");
+        else
+            anim.SetTrigger("Punch");
         if (playerController.target != null && Vector3.Distance(transform.position, playerController.target.position) <= radius * 3)
         {
             transform.LookAt(playerController.target.position);

@@ -3,7 +3,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public Joystick joystick;
-    public HandPunch handPunch;
+    public Punch Punch;
 
     private Rigidbody rb;
     private Animator anim;
@@ -44,7 +44,7 @@ public class PlayerController : MonoBehaviour
     {
         bool isMove = Mathf.Abs(joystick.Direction.x) > 0.1 || Mathf.Abs(joystick.Direction.y) > 0.1;
 
-        if (isMove && handPunch.makePunch)
+        if (isMove && Punch.makePunch)
         {
             rb.velocity = Vector3.zero;
         }

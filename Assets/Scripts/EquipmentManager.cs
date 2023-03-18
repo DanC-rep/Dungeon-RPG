@@ -16,7 +16,7 @@ public class EquipmentManager : MonoBehaviour
     public SkinnedMeshRenderer targetWeaponMesh;
 
 
-    Equipment[] currentEquipment;
+    public Equipment[] currentEquipment;
     SkinnedMeshRenderer[] currentMeshes;
 
     public delegate void OnEquipmentChanged(Equipment newItem, Equipment oldItem);

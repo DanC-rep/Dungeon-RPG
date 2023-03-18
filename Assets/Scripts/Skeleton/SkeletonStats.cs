@@ -17,13 +17,9 @@ public class SkeletonStats : CharacterStats
         }
         else if (Health > 0)
         {
-            damage -= armor.GetValue();
-            damage = Mathf.Clamp(damage, 0, int.MaxValue);
-
             Health -= damage;
-
-            if (Health <= 0)
-                gameObject.GetComponent<Animator>().SetTrigger("Damage");
+            healthBar.SetHealth(Health);
+            gameObject.GetComponent<Animator>().SetTrigger("Damage");
         }
     }
 }

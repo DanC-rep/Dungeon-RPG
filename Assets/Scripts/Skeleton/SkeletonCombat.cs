@@ -22,13 +22,12 @@ public class SkeletonCombat : MonoBehaviour
     [SerializeField] private Transform hitPoint;
     [SerializeField] private float radius;
 
-
     private void Start()
     {
         agent = GetComponent<NavMeshAgent>();
         anim = GetComponent<Animator>();
+        healthBar.SetMaxHealth(skeletonStats.startHealth);
 
-        healthBar.SetMaxHealth(skeletonStats.Health);
     }
 
     private void Update()

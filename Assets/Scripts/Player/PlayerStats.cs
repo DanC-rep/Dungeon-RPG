@@ -52,7 +52,7 @@ public class PlayerStats : CharacterStats
         {
             Health -= damage;
             healthBar.SetHealth(Health);
-            if (!gameObject.GetComponent<HandPunch>().makePunch)
+            if (!gameObject.GetComponent<Punch>().makePunch)
             {
                 gameObject.GetComponent<Animator>().SetTrigger("Damage");
             }
