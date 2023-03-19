@@ -62,5 +62,12 @@ public class Interactible : MonoBehaviour
         }
 
     }
-    
+
+    public void OpenDoor(GameObject door)
+    {
+        door.GetComponent<Animator>().SetTrigger("OpenDoor");
+        interactible = false;
+        door.GetComponent<Interactible>().enabled = false;
+        door.GetComponent<Outline>().enabled = false;
+    }
 }

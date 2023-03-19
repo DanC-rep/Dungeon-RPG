@@ -30,9 +30,14 @@ public class PickupUI : MonoBehaviour
 
     public void Interact()
     {
-        if (playerController.interact != null)
+        if (playerController.interact != null && playerController.interact.name == "door")
+        {
+            playerController.interact.OpenDoor(playerController.interact.gameObject);
+        }
+        else if (playerController.interact != null && playerController.interact.tag == "Item")
         {
             playerController.interact.PickupItem();
         }
+        
     }
 }

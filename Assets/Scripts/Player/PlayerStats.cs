@@ -58,4 +58,10 @@ public class PlayerStats : CharacterStats
             }
         }
     }
+
+    public void AddHealth(int health)
+    {
+        Health += health;
+        healthBar.SetHealth(Health);
+    }
 }
