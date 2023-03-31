@@ -23,7 +23,7 @@ public class Punch : MonoBehaviour
     public IEnumerator MakePunchCoroutine()
     {
         makePunch = true;
-        if (EquipmentManager.instance.currentEquipment[4] != null)
+        if (EquipmentManager.instance.currentEquipment[1] != null)
             anim.SetTrigger("WeaponPunch");
         else
             anim.SetTrigger("Punch");
@@ -37,10 +37,10 @@ public class Punch : MonoBehaviour
 
     public void MakePunch()
     {
-        if (EquipmentManager.instance.currentEquipment[4] != null)
+        if (EquipmentManager.instance.currentEquipment[1] != null)
         {
-            hitPoint = EquipmentManager.instance.currentMeshes[4].gameObject.transform.Find("HitPoint").transform;
-            radius = EquipmentManager.instance.currentEquipment[4].weaponRadius;
+            hitPoint = EquipmentManager.instance.currentMeshes[1].gameObject.transform.Find("HitPoint").transform;
+            radius = EquipmentManager.instance.currentEquipment[1].weaponRadius;
         }
 
         Collider[] colliders = Physics.OverlapSphere(hitPoint.position, radius);

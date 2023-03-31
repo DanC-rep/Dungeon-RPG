@@ -50,6 +50,7 @@ public class PlayerStats : CharacterStats
         }
         else if (Health > 0)
         {
+            damage -= armor.GetValue();
             Health -= damage;
             healthBar.SetHealth(Health);
             if (!gameObject.GetComponent<Punch>().makePunch)

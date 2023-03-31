@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 793c0594c5289be42b2bb5e91ab849a6, type: 3}
-  m_Name: Sword
+  m_Name: Armor1
   m_EditorClassIdentifier: 
-  itemName: Sword
-  icon: {fileID: 21300000, guid: f9816656f1439964fa79df16af158e79, type: 3}
-  prefab: {fileID: -4139301908222651287, guid: 15757e76bd3139b40a36b0096a20d966, type: 3}
-  equipSlot: 1
-  mesh: {fileID: -4139301908222651287, guid: 15757e76bd3139b40a36b0096a20d966, type: 3}
-  armorModifier: 0
-  damageModifier: 30
-  weaponRadius: 1
+  itemName: Armor1
+  icon: {fileID: 21300000, guid: c6f04144222a18a4481463e816c7376f, type: 3}
+  prefab: {fileID: 0}
+  equipSlot: 0
+  mesh: {fileID: 2636900445022144504, guid: 98e179950b2e70e4289b2544cb138a0a, type: 3}
+  armorModifier: 10
+  damageModifier: 0
+  weaponRadius: 0

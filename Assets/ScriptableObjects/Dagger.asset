@@ -15,7 +15,7 @@ MonoBehaviour:
   itemName: Dagger
   icon: {fileID: 21300000, guid: 7c530e5ca4947fd4e9473744b171ba62, type: 3}
   prefab: {fileID: 1561269609766909049, guid: a84bb20a65623504a88dcd38f0ba6fcb, type: 3}
-  equipSlot: 4
+  equipSlot: 1
   mesh: {fileID: 1561269609766909049, guid: a84bb20a65623504a88dcd38f0ba6fcb, type: 3}
   armorModifier: 0
   damageModifier: 10

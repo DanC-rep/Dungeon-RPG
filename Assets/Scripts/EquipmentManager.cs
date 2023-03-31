@@ -15,6 +15,8 @@ public class EquipmentManager : MonoBehaviour
 
     public SkinnedMeshRenderer targetWeaponMesh;
 
+    public GameObject armorParent;
+    public GameObject[] meshesToHide;
 
     public Equipment[] currentEquipment;
     public SkinnedMeshRenderer[] currentMeshes;
@@ -50,6 +52,18 @@ public class EquipmentManager : MonoBehaviour
             onEquipmentChanged.Invoke(newItem, oldItem);
         }
 
+        if (slotIndex == 0)
+        {
+            armorParent.transform.Find(newItem.name).gameObject.SetActive(true);
+            currentEquipment[slotIndex] = newItem;
+            currentMeshes[slotIndex] = newItem.mesh;
+
+            foreach (var mesh in meshesToHide)
+            {
+                mesh.SetActive(false);
+            }
+            return;
+        }
 
         currentEquipment[slotIndex] = newItem;
         SkinnedMeshRenderer newMesh = Instantiate<SkinnedMeshRenderer>(newItem.mesh);
@@ -58,13 +72,14 @@ public class EquipmentManager : MonoBehaviour
         {
             AttachToMesh(newItem.mesh, slotIndex);
         }
-
-        newMesh.transform.parent = targetWeaponMesh.transform;
-        newMesh.bones = targetWeaponMesh.bones;
-        newMesh.rootBone = targetWeaponMesh.rootBone;
-        newMesh.transform.position = targetWeaponMesh.transform.position;
-        newMesh.transform.rotation = targetWeaponMesh.transform.rotation;
-
+        if (slotIndex == 1)
+        {
+            newMesh.transform.parent = targetWeaponMesh.transform;
+            newMesh.bones = targetWeaponMesh.bones;
+            newMesh.rootBone = targetWeaponMesh.rootBone;
+            newMesh.transform.position = targetWeaponMesh.transform.position;
+            newMesh.transform.rotation = targetWeaponMesh.transform.rotation;
+        }
         currentMeshes[slotIndex] = newMesh;
     }
 
