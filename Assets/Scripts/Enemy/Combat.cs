@@ -2,7 +2,7 @@ using UnityEngine.AI;
 using UnityEngine;
 using System.Collections;
 
-public class SkeletonCombat : MonoBehaviour
+public class Combat : MonoBehaviour
 {
     public GameObject target;
 
@@ -10,7 +10,7 @@ public class SkeletonCombat : MonoBehaviour
 
     public Player player;
     public HealthBar healthBar;
-    public SkeletonStats skeletonStats;
+    public EnemyStats enemyStats;
 
     private NavMeshAgent agent;
     private Animator anim;
@@ -26,7 +26,7 @@ public class SkeletonCombat : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
         anim = GetComponent<Animator>();
-        healthBar.SetMaxHealth(skeletonStats.startHealth);
+        healthBar.SetMaxHealth(enemyStats.startHealth);
 
     }
 
@@ -35,7 +35,7 @@ public class SkeletonCombat : MonoBehaviour
         bool isDistance = Vector3.Distance(transform.position, target.transform.position) < agent.stoppingDistance;
         canHit = isDistance;
 
-        if (skeletonStats.Health <= 0)
+        if (enemyStats.Health <= 0)
         {
             canHit = false;
         }
@@ -74,13 +74,13 @@ public class SkeletonCombat : MonoBehaviour
 
     private void DecreasePlayerHP()
     {
-        player.GetComponent<PlayerStats>().TakeDamage(skeletonStats.damage.GetValue());
+        player.GetComponent<PlayerStats>().TakeDamage(enemyStats.damage.GetValue());
     }
 
     private void DestroyEnemyEvent()
     {
         Destroy(gameObject);
-        PlayerStats.Money += skeletonStats.moneyFrom;
+        PlayerStats.Money += enemyStats.moneyFrom;
     }
 
 }

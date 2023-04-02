@@ -13,6 +13,8 @@ public class CharacterStats :MonoBehaviour
 
     public HealthBar healthBar;
 
+    public int radius;
+
     private void Awake()
     {
         Health = startHealth;

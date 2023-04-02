@@ -47,7 +47,7 @@ public class Punch : MonoBehaviour
 
         for (int i = 0; i < colliders.Length; i++)
         {
-            if (colliders[i].TryGetComponent(out SkeletonCombat skeleton))
+            if (colliders[i].TryGetComponent(out Combat enemy))
             {
                 StartCoroutine(MakePunchCoroutine());
             }
@@ -64,9 +64,9 @@ public class Punch : MonoBehaviour
 
         for (int i = 0; i < colliders.Length; i++)
         {
-            if (colliders[i].TryGetComponent(out SkeletonStats skeleton))
+            if (colliders[i].TryGetComponent(out EnemyStats enemy))
             {
-                skeleton.TakeDamage(gameObject.GetComponent<PlayerStats>().damage.GetValue());
+                enemy.TakeDamage(gameObject.GetComponent<PlayerStats>().damage.GetValue());
             }
         }
 

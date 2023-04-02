@@ -35,7 +35,7 @@ public class Movement : MonoBehaviour
         else
             anim.SetBool("Move", false);
 
-        if (Vector3.Distance(transform.position, target.transform.position) <= gameObject.GetComponent<SkeletonStats>().radius)
+        if (Vector3.Distance(transform.position, target.transform.position) <= gameObject.GetComponent<CharacterStats>().radius)
         {
             goToPlayer = true;
         }
@@ -50,7 +50,7 @@ public class Movement : MonoBehaviour
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.green;
-        Gizmos.DrawWireSphere(transform.position, gameObject.GetComponent<SkeletonStats>().radius);
+        Gizmos.DrawWireSphere(transform.position, gameObject.GetComponent<CharacterStats>().radius);
     }
 
     void GoToPlayer() 

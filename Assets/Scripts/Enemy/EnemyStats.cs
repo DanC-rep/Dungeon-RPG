@@ -1,8 +1,9 @@
 using UnityEngine;
-public class SkeletonStats : CharacterStats
+
+public class EnemyStats : CharacterStats
 {
     public int moneyFrom;
-    public int radius;
+
     public override void TakeDamage(int damage)
     {
         if (Health <= 0)
@@ -14,6 +15,7 @@ public class SkeletonStats : CharacterStats
             Health -= damage;
             healthBar.SetHealth(Health);
             gameObject.GetComponent<Animator>().SetTrigger("Death");
+            gameObject.GetComponent<CapsuleCollider>().enabled = false;
         }
         else if (Health > 0)
         {

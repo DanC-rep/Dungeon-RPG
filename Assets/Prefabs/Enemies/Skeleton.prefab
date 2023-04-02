@@ -973,14 +973,14 @@ GameObject:
   - component: {fileID: 7778386273010874423}
   - component: {fileID: 7778386273010874422}
   - component: {fileID: 7778386273070739985}
-  - component: {fileID: 5195894374419392382}
+  - component: {fileID: 343001638024176116}
   m_Layer: 0
   m_Name: Skeleton
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2773484596510764482
 Transform:
   m_ObjectHideFlags: 0
@@ -1069,6 +1069,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
+  waypoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  distanceToChangeGoal: 2
 --- !u!114 &7778386273070739985
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1085,11 +1089,11 @@ MonoBehaviour:
   cam: {fileID: 0}
   player: {fileID: 0}
   healthBar: {fileID: 1859724622826826444}
-  skeletonStats: {fileID: 5195894374419392382}
+  enemyStats: {fileID: 343001638024176116}
   reloadTime: 1.15
   hitPoint: {fileID: 7778386274884413544}
   radius: 1.2
---- !u!114 &5195894374419392382
+--- !u!114 &343001638024176116
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1098,16 +1102,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 3257990561163573112}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03e61d27b5baa0e4893c0d80e5afe9fa, type: 3}
+  m_Script: {fileID: 11500000, guid: c144a7356df875f47b63866c36015357, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   damage:
-    baseValue: 5
+    baseValue: 10
   armor:
     baseValue: 0
-  Health: 20
+  Health: 0
   startHealth: 40
   healthBar: {fileID: 1859724622826826444}
+  radius: 4
   moneyFrom: 15
 --- !u!1 &3265966035974008334
 GameObject:
@@ -2343,11 +2348,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 133723118329483490, guid: 8d5c7540ada666e4394ee8ea7383118e, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 133723118329483490, guid: 8d5c7540ada666e4394ee8ea7383118e, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 133723118910932522, guid: 8d5c7540ada666e4394ee8ea7383118e, type: 3}
       propertyPath: m_Value
