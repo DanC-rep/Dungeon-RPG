@@ -8,6 +8,8 @@ public class PlayerStats : CharacterStats
     public int startMoney = 0;
     public static int Money;
 
+    public GameObject deathDisplay;
+
     private void Awake()
     {
         Money = startMoney;
@@ -37,6 +39,8 @@ public class PlayerStats : CharacterStats
         if (Health <= 0)
         {
             gameObject.GetComponent<Animator>().SetTrigger("Death");
+            deathDisplay.SetActive(true);
+
         }
         else if (Health - damage <= 0)
         {
@@ -46,6 +50,7 @@ public class PlayerStats : CharacterStats
             Health -= damage;
             healthBar.SetHealth(Health);
             gameObject.GetComponent<Animator>().SetTrigger("Death");
+            deathDisplay.SetActive(true);
 
         }
         else if (Health > 0)

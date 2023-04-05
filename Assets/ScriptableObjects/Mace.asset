@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 793c0594c5289be42b2bb5e91ab849a6, type: 3}
+  m_Name: Mace
+  m_EditorClassIdentifier: 
+  itemName: Mace
+  icon: {fileID: 21300000, guid: 047025ff50dcfbb4bab2e6e8229a192b, type: 3}
+  prefab: {fileID: -7872580287219010800, guid: c119a6f851e897946a07001df1c39596, type: 3}
+  equipSlot: 1
+  mesh: {fileID: -7872580287219010800, guid: c119a6f851e897946a07001df1c39596, type: 3}
+  armorModifier: 0
+  damageModifier: 15
+  weaponRadius: 1

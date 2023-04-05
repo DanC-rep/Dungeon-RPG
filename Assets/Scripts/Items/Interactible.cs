@@ -69,5 +69,6 @@ public class Interactible : MonoBehaviour
         interactible = false;
         door.GetComponent<Interactible>().enabled = false;
         door.GetComponent<Outline>().enabled = false;
+        door.GetComponent<MeshCollider>().enabled = false;
     }
 }

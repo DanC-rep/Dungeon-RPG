@@ -11,12 +11,14 @@ public class Equipment : Item
 
     public float weaponRadius;
 
+
     public override void Use()
     {
         base.Use();
 
         EquipmentManager.instance.Equip(this);
         RemoveFromInventory();
+
     }
 }
 
