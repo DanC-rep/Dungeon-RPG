@@ -14,6 +14,11 @@ public class Interactible : MonoBehaviour
 
     public Item item;
 
+    public GameObject LevelCompleteDisplay;
+    public GameObject[] otherUI;
+
+    public GameObject ShopUI;
+
     private void Start()
     {
         outline = gameObject.GetComponent<Outline>();
@@ -70,5 +75,27 @@ public class Interactible : MonoBehaviour
         door.GetComponent<Interactible>().enabled = false;
         door.GetComponent<Outline>().enabled = false;
         door.GetComponent<MeshCollider>().enabled = false;
+    }
+
+    public void CompleteLevel()
+    {
+        LevelCompleteDisplay.SetActive(true);
+
+        foreach (var el in otherUI)
+        {
+            el.SetActive(false);
+        }
+
+        Time.timeScale = 0;
+    }
+
+    public void OpenShop()
+    {
+        ShopUI.SetActive(true);
+
+        foreach (var el in otherUI)
+        {
+            el.SetActive(false);
+        }
     }
 }

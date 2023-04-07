@@ -70,4 +70,14 @@ public class PlayerStats : CharacterStats
         Health += health;
         healthBar.SetHealth(Health);
     }
+
+    public void AddDamage(int damageAdd)
+    {
+        damage.AddModifier(damageAdd);
+    }
+
+    public void AddSpeed(int speed)
+    {
+        gameObject.GetComponent<PlayerController>().AddSpeed(speed);
+    }
 }

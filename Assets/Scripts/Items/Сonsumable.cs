@@ -4,6 +4,8 @@ using UnityEngine;
 public class Сonsumable : Item
 {
     public int healAmount;
+    public int damageAmount;
+    public int speedAmount;
 
     public override void Use()
     {

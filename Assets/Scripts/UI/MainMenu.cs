@@ -3,9 +3,12 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    public GameObject levelSelector;
+
     public void Play()
     {
-        SceneManager.LoadScene(1);
+        levelSelector.SetActive(true);
+        gameObject.SetActive(false);
     }
 
     public void Options()

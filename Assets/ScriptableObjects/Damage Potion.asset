@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a564a2fa9154d0f4e8f51bc7bd56c41a, type: 3}
+  m_Name: Damage Potion
+  m_EditorClassIdentifier: 
+  itemName: Damage Potion
+  icon: {fileID: 21300000, guid: e7607a7004637654faf82c8fa9cf841f, type: 3}
+  prefab: {fileID: 796011849995563385, guid: 91e5dd36635360a4799a813b9ef51ec3, type: 3}
+  healAmount: 0
+  damageAmount: 5
+  speedAmount: 0

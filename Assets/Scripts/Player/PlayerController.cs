@@ -138,4 +138,9 @@ public class PlayerController : MonoBehaviour
             interact = null;
         }
     }
+
+    public void AddSpeed(int addSpeed)
+    {
+        speed += addSpeed;
+    }
 }

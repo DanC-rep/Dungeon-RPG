@@ -49,17 +49,27 @@ public class EquipmentManager : MonoBehaviour
 
         if (onEquipmentChanged != null)
         {
-            onEquipmentChanged.Invoke(newItem, oldItem);
+                onEquipmentChanged.Invoke(newItem, oldItem);
         }
 
         if (slotIndex == 0)
         {
+            if (currentEquipment[slotIndex] != null)
+            {
+                armorParent.transform.Find(oldItem.name).gameObject.SetActive(false);
+            }
             armorParent.transform.Find(newItem.name).gameObject.SetActive(true);
             currentEquipment[slotIndex] = newItem;
             currentMeshes[slotIndex] = newItem.mesh;
 
             foreach (var mesh in meshesToHide)
             {
+                if (newItem.name == "Armor2" && mesh.name == "Hands")
+                {
+                    mesh.SetActive(true);
+                    continue;
+                }
+
                 mesh.SetActive(false);
             }
             return;

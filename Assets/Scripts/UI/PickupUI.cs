@@ -34,10 +34,17 @@ public class PickupUI : MonoBehaviour
         {
             playerController.interact.OpenDoor(playerController.interact.gameObject);
         }
+        else if (playerController.interact != null && playerController.interact.name == "LevelDoor")
+        {
+            playerController.interact.CompleteLevel();
+        }
+        else if (playerController.interact != null && playerController.interact.name == "Dealer")
+        {
+            playerController.interact.OpenShop();
+        }
         else if (playerController.interact != null && playerController.interact.tag == "Item")
         {
             playerController.interact.PickupItem();
         }
-        
     }
 }

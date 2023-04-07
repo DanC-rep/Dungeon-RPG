@@ -18,6 +18,10 @@ public class ConsumableManager : MonoBehaviour
     public void AddBafs(Ñonsumable item)
     {
         playerStats.AddHealth(item.healAmount);
-        Debug.Log("Added Health");
+
+        playerStats.AddDamage(item.damageAmount);
+
+        playerStats.AddSpeed(item.speedAmount);
+        Debug.Log(playerStats.damage.GetValue());
     }
 }
