@@ -19,6 +19,8 @@ public class Interactible : MonoBehaviour
 
     public GameObject ShopUI;
 
+    public LevelWin levelWin;
+
     private void Start()
     {
         outline = gameObject.GetComponent<Outline>();
@@ -87,6 +89,8 @@ public class Interactible : MonoBehaviour
         }
 
         Time.timeScale = 0;
+
+        levelWin.WinLevel();
     }
 
     public void OpenShop()

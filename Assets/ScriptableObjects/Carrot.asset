@@ -15,4 +15,7 @@ MonoBehaviour:
   itemName: Carrot
   icon: {fileID: 21300000, guid: 852e5a13256ecfd4eaf1b75b61553f1a, type: 3}
   prefab: {fileID: 6744518677837552346, guid: 22088d25a5df2ae42ac7be459803ecca, type: 3}
+  cost: 10
   healAmount: 5
+  damageAmount: 0
+  speedAmount: 0

@@ -8010,6 +8010,8 @@ MonoBehaviour:
   item: {fileID: 11400000, guid: 34f1bc04c65827941a25c15950a503a1, type: 2}
   LevelCompleteDisplay: {fileID: 0}
   otherUI: []
+  ShopUI: {fileID: 0}
+  levelWin: {fileID: 0}
 --- !u!95 &697182947
 Animator:
   serializedVersion: 4
@@ -9158,6 +9160,8 @@ MonoBehaviour:
   - {fileID: 336526588}
   - {fileID: 1731991830}
   - {fileID: 1568100810}
+  ShopUI: {fileID: 0}
+  levelWin: {fileID: 1270255398}
 --- !u!95 &802041800
 Animator:
   serializedVersion: 4
@@ -10959,6 +10963,8 @@ MonoBehaviour:
   item: {fileID: 11400000, guid: 34f1bc04c65827941a25c15950a503a1, type: 2}
   LevelCompleteDisplay: {fileID: 0}
   otherUI: []
+  ShopUI: {fileID: 0}
+  levelWin: {fileID: 0}
 --- !u!95 &1007929865
 Animator:
   serializedVersion: 4
@@ -13829,6 +13835,7 @@ GameObject:
   - component: {fileID: 1270255394}
   - component: {fileID: 1270255396}
   - component: {fileID: 1270255397}
+  - component: {fileID: 1270255398}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -13900,6 +13907,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerStats: {fileID: 4540228998887951903}
+--- !u!114 &1270255398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1270255393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20c2e500f012e294aa32286e6d244bef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextLevel: 2
 --- !u!1001 &1272395125
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17082,6 +17102,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f0f3b3c7118be745bbb4d1b0587e96a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nextLevel: Level 2
 --- !u!1001 &1531420452
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21003,6 +21024,8 @@ MonoBehaviour:
   item: {fileID: 11400000, guid: 34f1bc04c65827941a25c15950a503a1, type: 2}
   LevelCompleteDisplay: {fileID: 0}
   otherUI: []
+  ShopUI: {fileID: 0}
+  levelWin: {fileID: 0}
 --- !u!95 &1861915678
 Animator:
   serializedVersion: 4
@@ -21175,6 +21198,8 @@ MonoBehaviour:
   item: {fileID: 11400000, guid: 34f1bc04c65827941a25c15950a503a1, type: 2}
   LevelCompleteDisplay: {fileID: 0}
   otherUI: []
+  ShopUI: {fileID: 0}
+  levelWin: {fileID: 0}
 --- !u!95 &1891018269
 Animator:
   serializedVersion: 4

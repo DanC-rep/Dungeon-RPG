@@ -15,6 +15,7 @@ MonoBehaviour:
   itemName: Armor 2
   icon: {fileID: 21300000, guid: 66bd87aedd511014d9dbbad1a9e01eaf, type: 3}
   prefab: {fileID: 0}
+  cost: 75
   equipSlot: 0
   mesh: {fileID: 243105153531974229, guid: d9c41cfbe1dc4c24fb9919fef4172c6e, type: 3}
   armorModifier: 5

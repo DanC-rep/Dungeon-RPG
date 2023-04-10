@@ -3,6 +3,8 @@ using UnityEngine.SceneManagement;
 
 public class LevelCompleteMenu : MonoBehaviour
 {
+    public string nextLevel;
+
     public void Home()
     {
         SceneManager.LoadScene(0);
@@ -11,6 +13,7 @@ public class LevelCompleteMenu : MonoBehaviour
 
     public void NextLevel()
     {
-        Debug.Log("next level");
+        SceneManager.LoadScene(nextLevel);
+        Time.timeScale = 2;
     }
 }
