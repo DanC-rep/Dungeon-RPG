@@ -14,8 +14,9 @@ public class PlayerController : MonoBehaviour
 
     public Interactible interact;
 
-    [SerializeField] private float speed = 5;
 
+
+    bool isCollisionWall = false;
     bool isLoot = false;
 
 
@@ -31,6 +32,8 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         Move();
+
+        Debug.Log(isCollisionWall + " " + joystick.Direction.x);
     }
 
     private void Update()
@@ -47,16 +50,21 @@ public class PlayerController : MonoBehaviour
     {
         bool isMove = Mathf.Abs(joystick.Direction.x) > 0.1 || Mathf.Abs(joystick.Direction.y) > 0.1;
 
-        if (isMove && (Punch.makePunch || isLoot))
+        if ((isMove && (Punch.makePunch || isLoot)))
         {
             rb.velocity = Vector3.zero;
+        }
+        else if (isCollisionWall)
+        {
+            rb.velocity = Vector3.zero;
+            anim.SetBool("IsRunning", false);
         }
         else if (isMove && gameObject.GetComponent<PlayerStats>().Health > 0)
         {
 
             anim.SetBool("IsRunning", true);
             Vector3 movement = new Vector3(joystick.Horizontal, 0.0f, joystick.Vertical);
-            rb.AddForce(movement * speed * 2);
+            rb.AddForce(movement * gameObject.GetComponent<PlayerStats>().speed * 2);
             transform.forward = Vector3.Normalize(movement);
         }
         else
@@ -139,8 +147,21 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public void AddSpeed(int addSpeed)
+    private void OnCollisionStay(Collision collision)
     {
-        speed += addSpeed;
+        bool isDirToStopHor = Mathf.Abs(joystick.Direction.x) > 0.9;
+        bool isDirToStopVer = Mathf.Abs(joystick.Direction.y) > 0.9;
+        if (collision.gameObject.tag == "wall" && Mathf.Abs(collision.transform.position.x) > Mathf.Abs(transform.position.x) && isDirToStopHor)
+        {
+            isCollisionWall = true;
+        }
+        else if (collision.gameObject.tag == "wall" && Mathf.Abs(collision.transform.position.z) > Mathf.Abs(transform.position.z) && isDirToStopVer)
+        {
+            isCollisionWall = true;
+        }
+        else
+        {
+            isCollisionWall = false;
+        }
     }
 }

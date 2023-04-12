@@ -14,6 +14,6 @@ public class LevelCompleteMenu : MonoBehaviour
     public void NextLevel()
     {
         SceneManager.LoadScene(nextLevel);
-        Time.timeScale = 2;
+        Time.timeScale = 1;
     }
 }

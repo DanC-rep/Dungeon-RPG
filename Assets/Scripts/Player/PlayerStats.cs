@@ -8,6 +8,8 @@ public class PlayerStats : CharacterStats
     public int startMoney = 0;
     public static int Money;
 
+    public float speed = 150;
+
     public GameObject deathDisplay;
 
     private void Awake()
@@ -76,8 +78,8 @@ public class PlayerStats : CharacterStats
         damage.AddModifier(damageAdd);
     }
 
-    public void AddSpeed(int speed)
+    public void AddSpeed(int _speed)
     {
-        gameObject.GetComponent<PlayerController>().AddSpeed(speed);
+        speed += _speed;
     }
 }
