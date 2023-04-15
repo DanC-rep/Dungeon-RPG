@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 public class DeadMenu : MonoBehaviour
 {
     public GameObject[] otherUI;
+    public string level;
 
     private void Start()
     {
@@ -18,7 +19,7 @@ public class DeadMenu : MonoBehaviour
 
     public void Restart()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(level);
     }
 
     public void Home()

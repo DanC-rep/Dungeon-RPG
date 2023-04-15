@@ -15,6 +15,7 @@ MonoBehaviour:
   itemName: Damage Potion
   icon: {fileID: 21300000, guid: e7607a7004637654faf82c8fa9cf841f, type: 3}
   prefab: {fileID: 796011849995563385, guid: 91e5dd36635360a4799a813b9ef51ec3, type: 3}
+  cost: 45
   healAmount: 0
   damageAmount: 5
   speedAmount: 0

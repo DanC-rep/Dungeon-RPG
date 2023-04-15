@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_LightingSettings: {fileID: 4890085278179872738, guid: aacbfb38bacde554aab9a3449e05327b, type: 2}
+  m_LightingSettings: {fileID: 4890085278179872738, guid: 03bea6c128202b7418113bfa54935352, type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -5344,6 +5344,7 @@ MonoBehaviour:
   - {fileID: 1568100810}
   - {fileID: 1009320703}
   - {fileID: 336526588}
+  level: Level 1
 --- !u!114 &473033229
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7635,7 +7636,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 343001638024176116, guid: 62aad273eff3e404a82c5fe1fbf5589e, type: 3}
       propertyPath: moneyFrom
-      value: 10
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 343001638024176116, guid: 62aad273eff3e404a82c5fe1fbf5589e, type: 3}
       propertyPath: startHealth
@@ -16193,7 +16194,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 5aa0d71d789c93a468898d8acfcf2a09, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d54a9728519c5d54bbe09aff5bd95284, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -17064,6 +17065,7 @@ MonoBehaviour:
   - {fileID: 1568100810}
   - {fileID: 1009320703}
   - {fileID: 336526588}
+  level: 
 --- !u!114 &1530475620
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17893,8 +17895,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.000015258789, y: 281.14215}
-  m_SizeDelta: {x: -196.1615, y: -535.4797}
+  m_AnchoredPosition: {x: -0.000015258789, y: 277.58}
+  m_SizeDelta: {x: -196.1615, y: -528.35}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1572993992
 MonoBehaviour:
@@ -28754,7 +28756,6 @@ MonoBehaviour:
   startHealth: 100
   healthBar: {fileID: 1323216133}
   radius: 0
-  startMoney: 100
   speed: 150
   deathDisplay: {fileID: 1731991830}
 --- !u!4 &4548762041066942987

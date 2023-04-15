@@ -80,7 +80,8 @@ public class Combat : MonoBehaviour
     private void DestroyEnemyEvent()
     {
         Destroy(gameObject);
-        PlayerStats.Money += enemyStats.moneyFrom;
+        PlayerPrefs.SetInt("Money", PlayerStats.Money + enemyStats.moneyFrom);
+        PlayerStats.Money = PlayerPrefs.GetInt("Money");
     }
 
 }

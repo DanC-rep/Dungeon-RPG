@@ -16,7 +16,7 @@ public class PlayerController : MonoBehaviour
 
 
 
-    bool isCollisionWall = false;
+    // bool isCollisionWall = false;
     bool isLoot = false;
 
 
@@ -32,8 +32,6 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         Move();
-
-        Debug.Log(isCollisionWall + " " + joystick.Direction.x);
     }
 
     private void Update()
@@ -54,11 +52,11 @@ public class PlayerController : MonoBehaviour
         {
             rb.velocity = Vector3.zero;
         }
-        else if (isCollisionWall)
-        {
-            rb.velocity = Vector3.zero;
-            anim.SetBool("IsRunning", false);
-        }
+        //else if (isCollisionWall)
+        //{
+        //    rb.velocity = Vector3.zero;
+        //    anim.SetBool("IsRunning", false);
+        //}
         else if (isMove && gameObject.GetComponent<PlayerStats>().Health > 0)
         {
 
@@ -147,21 +145,21 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void OnCollisionStay(Collision collision)
-    {
-        bool isDirToStopHor = Mathf.Abs(joystick.Direction.x) > 0.9;
-        bool isDirToStopVer = Mathf.Abs(joystick.Direction.y) > 0.9;
-        if (collision.gameObject.tag == "wall" && Mathf.Abs(collision.transform.position.x) > Mathf.Abs(transform.position.x) && isDirToStopHor)
-        {
-            isCollisionWall = true;
-        }
-        else if (collision.gameObject.tag == "wall" && Mathf.Abs(collision.transform.position.z) > Mathf.Abs(transform.position.z) && isDirToStopVer)
-        {
-            isCollisionWall = true;
-        }
-        else
-        {
-            isCollisionWall = false;
-        }
-    }
+    //private void OnCollisionStay(Collision collision)
+    //{
+    //    bool isDirToStopHor = Mathf.Abs(joystick.Direction.x) > 0.9;
+    //    bool isDirToStopVer = Mathf.Abs(joystick.Direction.y) > 0.9;
+    //    if (collision.gameObject.tag == "wall" && Mathf.Abs(collision.transform.position.x) > Mathf.Abs(transform.position.x) && isDirToStopHor)
+    //    {
+    //        isCollisionWall = true;
+    //    }
+    //    else if (collision.gameObject.tag == "wall" && Mathf.Abs(collision.transform.position.z) > Mathf.Abs(transform.position.z) && isDirToStopVer)
+    //    {
+    //        isCollisionWall = true;
+    //    }
+    //    else
+    //    {
+    //        isCollisionWall = false;
+    //    }
+    //}
 }

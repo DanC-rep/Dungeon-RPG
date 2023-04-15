@@ -15,6 +15,7 @@ MonoBehaviour:
   itemName: Axe
   icon: {fileID: 21300000, guid: cba124e6c72499347ac793f83955aba6, type: 3}
   prefab: {fileID: 4850111850136725634, guid: 51788d93b2b5a5744a6e0c180e04fa71, type: 3}
+  cost: 80
   equipSlot: 1
   mesh: {fileID: 4850111850136725634, guid: 51788d93b2b5a5744a6e0c180e04fa71, type: 3}
   armorModifier: 0

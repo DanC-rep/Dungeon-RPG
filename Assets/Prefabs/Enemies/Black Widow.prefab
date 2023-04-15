@@ -2848,7 +2848,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  waypoints: []
+  waypoints:
+  - {fileID: 0}
+  - {fileID: 0}
   distanceToChangeGoal: 2
 --- !u!114 &5629211206906176967
 MonoBehaviour:
@@ -2880,10 +2882,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 15.232742
-  m_Height: 30.465485
+  m_Radius: 1.6979513
+  m_Height: 4.362665
   m_Direction: 1
-  m_Center: {x: 5.8788147, y: 0, z: -18.733318}
+  m_Center: {x: 0.16226721, y: 0.09666729, z: 0.2244463}
 --- !u!1 &6868498592923709352
 GameObject:
   m_ObjectHideFlags: 0

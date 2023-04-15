@@ -31,7 +31,7 @@ public class Inventory : MonoBehaviour
         if (items.Count >= space)
         {
             Debug.Log("Maximum");
-            return false; ;
+            return false;
         }
         items.Add(item);
 

@@ -5,16 +5,16 @@ using UnityEngine;
 public class PlayerStats : CharacterStats
 {
 
-    public int startMoney = 0;
     public static int Money;
 
-    public float speed = 150;
+    public float speed;
 
     public GameObject deathDisplay;
 
     private void Awake()
     {
-        Money = startMoney;
+        Money = PlayerPrefs.GetInt("Money", 0);
+        speed = PlayerPrefs.GetFloat("Speed", 150);
     }
     private void Start()
     {
@@ -80,6 +80,6 @@ public class PlayerStats : CharacterStats
 
     public void AddSpeed(int _speed)
     {
-        speed += _speed;
+        PlayerPrefs.SetFloat("Speed", speed + _speed);
     }
 }

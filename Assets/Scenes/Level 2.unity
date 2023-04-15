@@ -4373,6 +4373,7 @@ MonoBehaviour:
   - {fileID: 1568100810}
   - {fileID: 1009320703}
   - {fileID: 336526588}
+  level: Level 2
 --- !u!114 &473033229
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5154,6 +5155,7 @@ Transform:
   - {fileID: 373278768}
   - {fileID: 1354537133}
   - {fileID: 1547583396}
+  - {fileID: 1239021570}
   m_Father: {fileID: 1655792176}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -13969,6 +13971,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6715374904229609137, guid: 29418f3088b7d5d47b4ed0f5a48d387f, type: 3}
   m_PrefabInstance: {fileID: 1358260996}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1239021570 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9051238300485817969, guid: 2f6c4572e07a60b43b00e1c4f489a806, type: 3}
+  m_PrefabInstance: {fileID: 1426831841}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1241346570 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3913222489175782338, guid: 76439eb344aa1f8459ecde9f54affbef, type: 3}
@@ -16754,6 +16761,67 @@ Transform:
   m_Father: {fileID: 1062580600}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1426831841
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 520873197}
+    m_Modifications:
+    - target: {fileID: 7779381877309823848, guid: 2f6c4572e07a60b43b00e1c4f489a806, type: 3}
+      propertyPath: m_Name
+      value: Wall_27 (27)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7779381877309823848, guid: 2f6c4572e07a60b43b00e1c4f489a806, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 9051238300485817969, guid: 2f6c4572e07a60b43b00e1c4f489a806, type: 3}
+      propertyPath: m_RootOrder
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 9051238300485817969, guid: 2f6c4572e07a60b43b00e1c4f489a806, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9051238300485817969, guid: 2f6c4572e07a60b43b00e1c4f489a806, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9051238300485817969, guid: 2f6c4572e07a60b43b00e1c4f489a806, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9051238300485817969, guid: 2f6c4572e07a60b43b00e1c4f489a806, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9051238300485817969, guid: 2f6c4572e07a60b43b00e1c4f489a806, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9051238300485817969, guid: 2f6c4572e07a60b43b00e1c4f489a806, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9051238300485817969, guid: 2f6c4572e07a60b43b00e1c4f489a806, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9051238300485817969, guid: 2f6c4572e07a60b43b00e1c4f489a806, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9051238300485817969, guid: 2f6c4572e07a60b43b00e1c4f489a806, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9051238300485817969, guid: 2f6c4572e07a60b43b00e1c4f489a806, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2f6c4572e07a60b43b00e1c4f489a806, type: 3}
 --- !u!1001 &1432099053
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17758,6 +17826,7 @@ MonoBehaviour:
   - {fileID: 1568100810}
   - {fileID: 1009320703}
   - {fileID: 336526588}
+  level: 
 --- !u!114 &1530475620
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17796,7 +17865,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f0f3b3c7118be745bbb4d1b0587e96a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextLevel: 
+  nextLevel: Level 3
 --- !u!4 &1532819843 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2470529085381542805, guid: a9c55b2fac05ba248a24bd117da7b964, type: 3}
@@ -33361,7 +33430,7 @@ MonoBehaviour:
   startHealth: 100
   healthBar: {fileID: 1323216133}
   radius: 0
-  startMoney: 200
+  startMoney: 0
   speed: 150
   deathDisplay: {fileID: 1731991830}
 --- !u!4 &4540885448346811849
